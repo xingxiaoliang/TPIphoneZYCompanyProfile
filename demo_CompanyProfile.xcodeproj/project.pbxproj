@@ -14,6 +14,8 @@
 		DC3D4D191B53677400CFD716 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC3D4D181B53677400CFD716 /* Images.xcassets */; };
 		DC3D4D1C1B53677400CFD716 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC3D4D1A1B53677400CFD716 /* LaunchScreen.xib */; };
 		DC3D4D281B53677400CFD716 /* demo_CompanyProfileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D4D271B53677400CFD716 /* demo_CompanyProfileTests.m */; };
+		DC3D4D361B53B22500CFD716 /* JianJieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D4D351B53B22500CFD716 /* JianJieViewController.m */; };
+		DC3D4D391B53B93000CFD716 /* DshijViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D4D381B53B93000CFD716 /* DshijViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		DC3D4D211B53677400CFD716 /* demo_CompanyProfileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demo_CompanyProfileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC3D4D261B53677400CFD716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC3D4D271B53677400CFD716 /* demo_CompanyProfileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = demo_CompanyProfileTests.m; sourceTree = "<group>"; };
+		DC3D4D341B53B22500CFD716 /* JianJieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianJieViewController.h; sourceTree = "<group>"; };
+		DC3D4D351B53B22500CFD716 /* JianJieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianJieViewController.m; sourceTree = "<group>"; };
+		DC3D4D371B53B93000CFD716 /* DshijViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DshijViewController.h; sourceTree = "<group>"; };
+		DC3D4D381B53B93000CFD716 /* DshijViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DshijViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,10 @@
 				DC3D4D101B53677400CFD716 /* AppDelegate.m */,
 				DC3D4D121B53677400CFD716 /* ViewController.h */,
 				DC3D4D131B53677400CFD716 /* ViewController.m */,
+				DC3D4D341B53B22500CFD716 /* JianJieViewController.h */,
+				DC3D4D351B53B22500CFD716 /* JianJieViewController.m */,
+				DC3D4D371B53B93000CFD716 /* DshijViewController.h */,
+				DC3D4D381B53B93000CFD716 /* DshijViewController.m */,
 				DC3D4D151B53677400CFD716 /* Main.storyboard */,
 				DC3D4D181B53677400CFD716 /* Images.xcassets */,
 				DC3D4D1A1B53677400CFD716 /* LaunchScreen.xib */,
@@ -222,6 +232,8 @@
 				DC3D4D141B53677400CFD716 /* ViewController.m in Sources */,
 				DC3D4D111B53677400CFD716 /* AppDelegate.m in Sources */,
 				DC3D4D0E1B53677400CFD716 /* main.m in Sources */,
+				DC3D4D391B53B93000CFD716 /* DshijViewController.m in Sources */,
+				DC3D4D361B53B22500CFD716 /* JianJieViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +428,7 @@
 				DC3D4D2D1B53677400CFD716 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC3D4D2E1B53677400CFD716 /* Build configuration list for PBXNativeTarget "demo_CompanyProfileTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +437,7 @@
 				DC3D4D301B53677400CFD716 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
