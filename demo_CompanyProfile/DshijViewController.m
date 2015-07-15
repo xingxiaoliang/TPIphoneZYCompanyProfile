@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.frame=CGRectMake(0, 108, SCREEN_WIDTH, SCREEN_HEIGHT);
+    self.view.backgroundColor=[UIColor clearColor];
+    UITableView *tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 150, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    tableView.backgroundColor=[UIColor grayColor];
+    [self.view addSubview:tableView];
     // Do any additional setup after loading the view.
 }
 

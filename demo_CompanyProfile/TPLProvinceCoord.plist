@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>22,63,160,146,0</string>
+	<string>22,63,160,146,0</string>
+	<string>184,137,40,46,1</string>
+	<string>224,163,20,26,1</string>
+	<string>244,173,30,40,1</string>
+	<string>244,213,70,46,1</string>
+	<string>289,203,25,26,1</string>
+	<string>244,137,90,35,2</string>
+	<string>224,137,20,25,2</string>
+	<string>334,107,30,55,2</string>
+	<string>364,2,43,137,2</string>
+	<string>407,12,17,108,2</string>
+	<string>275,172,39,28,2</string>
+	<string>209,260,80,66,3</string>
+	<string>289,260,26,20,3</string>
+	<string>206,327,80,63,4</string>
+	<string>436,12,75,78,5</string>
+	<string>425,90,75,30,6</string>
+	<string>407,121,85,35,7</string>
+	<string>365,166,26,48,8</string>
+	<string>365,146,13,48,8</string>
+	<string>335,163,30,65,9</string>
+	<string>315,182,20,85,10</string>
+	<string>299,230,20,50,10</string>
+	<string>391,190,35,35,11</string>
+	<string>324,405,27,22,12</string>
+	<string>335,228,57,32,13</string>
+	<string>335,260,52,32,14</string>
+	<string>392,235,27,47,15</string>
+	<string>419,225,25,26,16</string>
+	<string>289,280,46,35,17</string>
+	<string>315,267,20,13,17</string>
+	<string>289,315,46,35,18</string>
+	<string>335,292,42,52,19</string>
+	<string>377,287,32,57,20</string>
+	<string>289,350,62,38,21</string>
+	<string>351,345,57,20,22</string>
+	<string>409,305,37,35,23</string>
+	<string>419,272,37,33,24</string>
+	<string>444,232,40,35,25</string>
+	<string>379,140,32,26,26</string>
+	<string>392,166,32,24,27</string>
+	<string>430,156,35,25,28</string>
+	<string>426,185,23,26,29</string>
+	<string>419,251,25,20,30</string>
+	<string>456,267,30,20,31</string>
+	<string>409,340,30,20,32</string>
+	<string>355,365,25,20,33</string>
+	<string>385,365,25,20,34</string>
+</array>
+</plist>

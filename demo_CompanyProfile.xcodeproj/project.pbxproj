@@ -16,6 +16,39 @@
 		DC3D4D281B53677400CFD716 /* demo_CompanyProfileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D4D271B53677400CFD716 /* demo_CompanyProfileTests.m */; };
 		DC3D4D361B53B22500CFD716 /* JianJieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D4D351B53B22500CFD716 /* JianJieViewController.m */; };
 		DC3D4D391B53B93000CFD716 /* DshijViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D4D381B53B93000CFD716 /* DshijViewController.m */; };
+		DC7B04E61B54DE1800CE7527 /* ZhiFanymViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7B04E51B54DE1800CE7527 /* ZhiFanymViewController.m */; };
+		DC7B04EA1B54DE2800CE7527 /* zfym@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04E71B54DE2800CE7527 /* zfym@2x.png */; };
+		DC7B04EB1B54DE2800CE7527 /* TPLProvinceInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04E81B54DE2800CE7527 /* TPLProvinceInfo.plist */; };
+		DC7B04EC1B54DE2800CE7527 /* TPLProvinceCoord.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04E91B54DE2800CE7527 /* TPLProvinceCoord.plist */; };
+		DC7B050B1B54DE4000CE7527 /* anhui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04EE1B54DE4000CE7527 /* anhui@2x.png */; };
+		DC7B050C1B54DE4000CE7527 /* beijing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04EF1B54DE4000CE7527 /* beijing@2x.png */; };
+		DC7B050D1B54DE4000CE7527 /* chongqing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04F01B54DE4000CE7527 /* chongqing@2x.png */; };
+		DC7B050E1B54DE4000CE7527 /* city@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04F11B54DE4000CE7527 /* city@2x.png */; };
+		DC7B050F1B54DE4000CE7527 /* fujian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04F21B54DE4000CE7527 /* fujian@2x.png */; };
+		DC7B05101B54DE4000CE7527 /* gansu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04F31B54DE4000CE7527 /* gansu@2x.png */; };
+		DC7B05111B54DE4000CE7527 /* guangdong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04F41B54DE4000CE7527 /* guangdong@2x.png */; };
+		DC7B05121B54DE4000CE7527 /* guangxi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04F51B54DE4000CE7527 /* guangxi@2x.png */; };
+		DC7B05131B54DE4000CE7527 /* guizhou@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04F61B54DE4000CE7527 /* guizhou@2x.png */; };
+		DC7B05141B54DE4000CE7527 /* hainan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04F71B54DE4000CE7527 /* hainan@2x.png */; };
+		DC7B05151B54DE4000CE7527 /* hebei@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04F81B54DE4000CE7527 /* hebei@2x.png */; };
+		DC7B05161B54DE4000CE7527 /* heilongjiang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04F91B54DE4000CE7527 /* heilongjiang@2x.png */; };
+		DC7B05171B54DE4000CE7527 /* henan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04FA1B54DE4000CE7527 /* henan@2x.png */; };
+		DC7B05181B54DE4000CE7527 /* hubei@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04FB1B54DE4000CE7527 /* hubei@2x.png */; };
+		DC7B05191B54DE4000CE7527 /* hunan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04FC1B54DE4000CE7527 /* hunan@2x.png */; };
+		DC7B051A1B54DE4000CE7527 /* jiangsu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04FD1B54DE4000CE7527 /* jiangsu@2x.png */; };
+		DC7B051B1B54DE4000CE7527 /* jiangxi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04FE1B54DE4000CE7527 /* jiangxi@2x.png */; };
+		DC7B051C1B54DE4000CE7527 /* jinin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B04FF1B54DE4000CE7527 /* jinin@2x.png */; };
+		DC7B051D1B54DE4000CE7527 /* liaoning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B05001B54DE4000CE7527 /* liaoning@2x.png */; };
+		DC7B051E1B54DE4000CE7527 /* neimeng@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B05011B54DE4000CE7527 /* neimeng@2x.png */; };
+		DC7B051F1B54DE4000CE7527 /* shan2xi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B05021B54DE4000CE7527 /* shan2xi@2x.png */; };
+		DC7B05201B54DE4000CE7527 /* shandong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B05031B54DE4000CE7527 /* shandong@2x.png */; };
+		DC7B05211B54DE4000CE7527 /* shanghai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B05041B54DE4000CE7527 /* shanghai@2x.png */; };
+		DC7B05221B54DE4000CE7527 /* shanxi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B05051B54DE4000CE7527 /* shanxi@2x.png */; };
+		DC7B05231B54DE4000CE7527 /* sichuan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B05061B54DE4000CE7527 /* sichuan@2x.png */; };
+		DC7B05241B54DE4000CE7527 /* tianjin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B05071B54DE4000CE7527 /* tianjin@2x.png */; };
+		DC7B05251B54DE4000CE7527 /* xinjiang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B05081B54DE4000CE7527 /* xinjiang@2x.png */; };
+		DC7B05261B54DE4000CE7527 /* yunan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B05091B54DE4000CE7527 /* yunan@2x.png */; };
+		DC7B05271B54DE4000CE7527 /* zhejiang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7B050A1B54DE4000CE7527 /* zhejiang@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +79,40 @@
 		DC3D4D351B53B22500CFD716 /* JianJieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianJieViewController.m; sourceTree = "<group>"; };
 		DC3D4D371B53B93000CFD716 /* DshijViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DshijViewController.h; sourceTree = "<group>"; };
 		DC3D4D381B53B93000CFD716 /* DshijViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DshijViewController.m; sourceTree = "<group>"; };
+		DC7B04E41B54DE1800CE7527 /* ZhiFanymViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhiFanymViewController.h; sourceTree = "<group>"; };
+		DC7B04E51B54DE1800CE7527 /* ZhiFanymViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhiFanymViewController.m; sourceTree = "<group>"; };
+		DC7B04E71B54DE2800CE7527 /* zfym@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zfym@2x.png"; sourceTree = "<group>"; };
+		DC7B04E81B54DE2800CE7527 /* TPLProvinceInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TPLProvinceInfo.plist; sourceTree = "<group>"; };
+		DC7B04E91B54DE2800CE7527 /* TPLProvinceCoord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TPLProvinceCoord.plist; sourceTree = "<group>"; };
+		DC7B04EE1B54DE4000CE7527 /* anhui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "anhui@2x.png"; sourceTree = "<group>"; };
+		DC7B04EF1B54DE4000CE7527 /* beijing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beijing@2x.png"; sourceTree = "<group>"; };
+		DC7B04F01B54DE4000CE7527 /* chongqing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chongqing@2x.png"; sourceTree = "<group>"; };
+		DC7B04F11B54DE4000CE7527 /* city@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "city@2x.png"; sourceTree = "<group>"; };
+		DC7B04F21B54DE4000CE7527 /* fujian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fujian@2x.png"; sourceTree = "<group>"; };
+		DC7B04F31B54DE4000CE7527 /* gansu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gansu@2x.png"; sourceTree = "<group>"; };
+		DC7B04F41B54DE4000CE7527 /* guangdong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guangdong@2x.png"; sourceTree = "<group>"; };
+		DC7B04F51B54DE4000CE7527 /* guangxi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guangxi@2x.png"; sourceTree = "<group>"; };
+		DC7B04F61B54DE4000CE7527 /* guizhou@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guizhou@2x.png"; sourceTree = "<group>"; };
+		DC7B04F71B54DE4000CE7527 /* hainan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hainan@2x.png"; sourceTree = "<group>"; };
+		DC7B04F81B54DE4000CE7527 /* hebei@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hebei@2x.png"; sourceTree = "<group>"; };
+		DC7B04F91B54DE4000CE7527 /* heilongjiang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heilongjiang@2x.png"; sourceTree = "<group>"; };
+		DC7B04FA1B54DE4000CE7527 /* henan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "henan@2x.png"; sourceTree = "<group>"; };
+		DC7B04FB1B54DE4000CE7527 /* hubei@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hubei@2x.png"; sourceTree = "<group>"; };
+		DC7B04FC1B54DE4000CE7527 /* hunan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hunan@2x.png"; sourceTree = "<group>"; };
+		DC7B04FD1B54DE4000CE7527 /* jiangsu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jiangsu@2x.png"; sourceTree = "<group>"; };
+		DC7B04FE1B54DE4000CE7527 /* jiangxi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jiangxi@2x.png"; sourceTree = "<group>"; };
+		DC7B04FF1B54DE4000CE7527 /* jinin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinin@2x.png"; sourceTree = "<group>"; };
+		DC7B05001B54DE4000CE7527 /* liaoning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "liaoning@2x.png"; sourceTree = "<group>"; };
+		DC7B05011B54DE4000CE7527 /* neimeng@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "neimeng@2x.png"; sourceTree = "<group>"; };
+		DC7B05021B54DE4000CE7527 /* shan2xi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shan2xi@2x.png"; sourceTree = "<group>"; };
+		DC7B05031B54DE4000CE7527 /* shandong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shandong@2x.png"; sourceTree = "<group>"; };
+		DC7B05041B54DE4000CE7527 /* shanghai@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shanghai@2x.png"; sourceTree = "<group>"; };
+		DC7B05051B54DE4000CE7527 /* shanxi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shanxi@2x.png"; sourceTree = "<group>"; };
+		DC7B05061B54DE4000CE7527 /* sichuan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sichuan@2x.png"; sourceTree = "<group>"; };
+		DC7B05071B54DE4000CE7527 /* tianjin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tianjin@2x.png"; sourceTree = "<group>"; };
+		DC7B05081B54DE4000CE7527 /* xinjiang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xinjiang@2x.png"; sourceTree = "<group>"; };
+		DC7B05091B54DE4000CE7527 /* yunan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yunan@2x.png"; sourceTree = "<group>"; };
+		DC7B050A1B54DE4000CE7527 /* zhejiang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhejiang@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +162,7 @@
 				DC3D4D351B53B22500CFD716 /* JianJieViewController.m */,
 				DC3D4D371B53B93000CFD716 /* DshijViewController.h */,
 				DC3D4D381B53B93000CFD716 /* DshijViewController.m */,
+				DC7B04E31B54DDDD00CE7527 /* 枝繁叶茂 */,
 				DC3D4D151B53677400CFD716 /* Main.storyboard */,
 				DC3D4D181B53677400CFD716 /* Images.xcassets */,
 				DC3D4D1A1B53677400CFD716 /* LaunchScreen.xib */,
@@ -127,6 +195,55 @@
 				DC3D4D261B53677400CFD716 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC7B04E31B54DDDD00CE7527 /* 枝繁叶茂 */ = {
+			isa = PBXGroup;
+			children = (
+				DC7B04ED1B54DE3100CE7527 /* mapImage */,
+				DC7B04E41B54DE1800CE7527 /* ZhiFanymViewController.h */,
+				DC7B04E51B54DE1800CE7527 /* ZhiFanymViewController.m */,
+				DC7B04E71B54DE2800CE7527 /* zfym@2x.png */,
+				DC7B04E81B54DE2800CE7527 /* TPLProvinceInfo.plist */,
+				DC7B04E91B54DE2800CE7527 /* TPLProvinceCoord.plist */,
+			);
+			name = "枝繁叶茂";
+			sourceTree = "<group>";
+		};
+		DC7B04ED1B54DE3100CE7527 /* mapImage */ = {
+			isa = PBXGroup;
+			children = (
+				DC7B04EE1B54DE4000CE7527 /* anhui@2x.png */,
+				DC7B04EF1B54DE4000CE7527 /* beijing@2x.png */,
+				DC7B04F01B54DE4000CE7527 /* chongqing@2x.png */,
+				DC7B04F11B54DE4000CE7527 /* city@2x.png */,
+				DC7B04F21B54DE4000CE7527 /* fujian@2x.png */,
+				DC7B04F31B54DE4000CE7527 /* gansu@2x.png */,
+				DC7B04F41B54DE4000CE7527 /* guangdong@2x.png */,
+				DC7B04F51B54DE4000CE7527 /* guangxi@2x.png */,
+				DC7B04F61B54DE4000CE7527 /* guizhou@2x.png */,
+				DC7B04F71B54DE4000CE7527 /* hainan@2x.png */,
+				DC7B04F81B54DE4000CE7527 /* hebei@2x.png */,
+				DC7B04F91B54DE4000CE7527 /* heilongjiang@2x.png */,
+				DC7B04FA1B54DE4000CE7527 /* henan@2x.png */,
+				DC7B04FB1B54DE4000CE7527 /* hubei@2x.png */,
+				DC7B04FC1B54DE4000CE7527 /* hunan@2x.png */,
+				DC7B04FD1B54DE4000CE7527 /* jiangsu@2x.png */,
+				DC7B04FE1B54DE4000CE7527 /* jiangxi@2x.png */,
+				DC7B04FF1B54DE4000CE7527 /* jinin@2x.png */,
+				DC7B05001B54DE4000CE7527 /* liaoning@2x.png */,
+				DC7B05011B54DE4000CE7527 /* neimeng@2x.png */,
+				DC7B05021B54DE4000CE7527 /* shan2xi@2x.png */,
+				DC7B05031B54DE4000CE7527 /* shandong@2x.png */,
+				DC7B05041B54DE4000CE7527 /* shanghai@2x.png */,
+				DC7B05051B54DE4000CE7527 /* shanxi@2x.png */,
+				DC7B05061B54DE4000CE7527 /* sichuan@2x.png */,
+				DC7B05071B54DE4000CE7527 /* tianjin@2x.png */,
+				DC7B05081B54DE4000CE7527 /* xinjiang@2x.png */,
+				DC7B05091B54DE4000CE7527 /* yunan@2x.png */,
+				DC7B050A1B54DE4000CE7527 /* zhejiang@2x.png */,
+			);
+			name = mapImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +328,39 @@
 			files = (
 				DC3D4D171B53677400CFD716 /* Main.storyboard in Resources */,
 				DC3D4D1C1B53677400CFD716 /* LaunchScreen.xib in Resources */,
+				DC7B05121B54DE4000CE7527 /* guangxi@2x.png in Resources */,
+				DC7B04EA1B54DE2800CE7527 /* zfym@2x.png in Resources */,
+				DC7B05101B54DE4000CE7527 /* gansu@2x.png in Resources */,
+				DC7B05111B54DE4000CE7527 /* guangdong@2x.png in Resources */,
+				DC7B05251B54DE4000CE7527 /* xinjiang@2x.png in Resources */,
+				DC7B050C1B54DE4000CE7527 /* beijing@2x.png in Resources */,
+				DC7B05261B54DE4000CE7527 /* yunan@2x.png in Resources */,
+				DC7B050D1B54DE4000CE7527 /* chongqing@2x.png in Resources */,
+				DC7B050E1B54DE4000CE7527 /* city@2x.png in Resources */,
+				DC7B05141B54DE4000CE7527 /* hainan@2x.png in Resources */,
+				DC7B05231B54DE4000CE7527 /* sichuan@2x.png in Resources */,
+				DC7B05201B54DE4000CE7527 /* shandong@2x.png in Resources */,
+				DC7B051D1B54DE4000CE7527 /* liaoning@2x.png in Resources */,
+				DC7B05181B54DE4000CE7527 /* hubei@2x.png in Resources */,
+				DC7B050F1B54DE4000CE7527 /* fujian@2x.png in Resources */,
+				DC7B05191B54DE4000CE7527 /* hunan@2x.png in Resources */,
+				DC7B05131B54DE4000CE7527 /* guizhou@2x.png in Resources */,
+				DC7B04EB1B54DE2800CE7527 /* TPLProvinceInfo.plist in Resources */,
+				DC7B051E1B54DE4000CE7527 /* neimeng@2x.png in Resources */,
+				DC7B05211B54DE4000CE7527 /* shanghai@2x.png in Resources */,
 				DC3D4D191B53677400CFD716 /* Images.xcassets in Resources */,
+				DC7B05271B54DE4000CE7527 /* zhejiang@2x.png in Resources */,
+				DC7B051F1B54DE4000CE7527 /* shan2xi@2x.png in Resources */,
+				DC7B051B1B54DE4000CE7527 /* jiangxi@2x.png in Resources */,
+				DC7B051C1B54DE4000CE7527 /* jinin@2x.png in Resources */,
+				DC7B05241B54DE4000CE7527 /* tianjin@2x.png in Resources */,
+				DC7B050B1B54DE4000CE7527 /* anhui@2x.png in Resources */,
+				DC7B05161B54DE4000CE7527 /* heilongjiang@2x.png in Resources */,
+				DC7B05171B54DE4000CE7527 /* henan@2x.png in Resources */,
+				DC7B04EC1B54DE2800CE7527 /* TPLProvinceCoord.plist in Resources */,
+				DC7B05221B54DE4000CE7527 /* shanxi@2x.png in Resources */,
+				DC7B051A1B54DE4000CE7527 /* jiangsu@2x.png in Resources */,
+				DC7B05151B54DE4000CE7527 /* hebei@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +382,7 @@
 				DC3D4D111B53677400CFD716 /* AppDelegate.m in Sources */,
 				DC3D4D0E1B53677400CFD716 /* main.m in Sources */,
 				DC3D4D391B53B93000CFD716 /* DshijViewController.m in Sources */,
+				DC7B04E61B54DE1800CE7527 /* ZhiFanymViewController.m in Sources */,
 				DC3D4D361B53B22500CFD716 /* JianJieViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

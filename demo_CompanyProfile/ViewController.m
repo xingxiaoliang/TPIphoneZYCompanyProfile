@@ -9,16 +9,20 @@
 #import "ViewController.h"
 #import "JianJieViewController.h"
 #import "DshijViewController.h"
+#import "ZhiFanymViewController.h"
 @interface ViewController ()<UIScrollViewDelegate,UIScrollViewAccessibilityDelegate>
 {
     UIScrollView *scrollView;
     NSMutableArray *btnArray;
     NSArray *titleArray;
     UILabel *label;
+    UIView *lineView;
+    NSMutableArray *lineArray;
+    JianJieViewController *jiana;
+    DshijViewController *jianb;
+    ZhiFanymViewController *zhiFan;
 }
 
-#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 
 @end
 
@@ -28,32 +32,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    lineArray=[NSMutableArray array];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
     NSDate *adate = [dateFormatter dateFromString:@"1991-04-14"];
     NSLog(@"adate==%@", adate);
     
-    
     label=[[UILabel alloc]initWithFrame:CGRectMake(100, 100, 100, 50)];
-
-    JianJieViewController *jianj=[[JianJieViewController alloc]init];
-    DshijViewController *dashij=[[DshijViewController alloc]init];
-    //self.view.subviews=@[jianj,dashij];
     
     
     btnArray=[NSMutableArray array];
     titleArray=@[@"公司简介",@"大事记",@"数说太平",@"股东介绍",@"枝繁叶茂",@"太平投资",@"辉煌太平"];
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.width, 66)];
+    
+    UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.width, 64)];
+    [navigationBar setTranslucent:NO];
+    [navigationBar setBarTintColor:[UIColor colorWithRed:35.0/255.0 green:150.0/255.0 blue:218.0/255.0 alpha:1.0]];
+    //navigationBar.backgroundColor=[UIColor colorWithRed:35.0/255.0 green:150.0/255.0 blue:218.0/255.0 alpha:0];
     //nav.tintColor = COLOR(200, 100, 162);;
     //创建UINavigationItem
-    UINavigationItem * navigationBarTitle = [[UINavigationItem alloc] initWithTitle:@"公司简介"];
+    UINavigationItem * navigationBarTitle = [[UINavigationItem alloc] initWithTitle:@"中国太平"];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [navigationBar pushNavigationItem: navigationBarTitle animated:YES];
     [self.view addSubview: navigationBar];    // Do any additional setup after loading the view, typically from a nib.
     
     scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH , 44)];
-    scrollView.backgroundColor = [UIColor grayColor];
+    scrollView.backgroundColor = [UIColor clearColor];
     // 是否支持滑动最顶端
     //    scrollView.scrollsToTop = NO;
     scrollView.delegate = self;
@@ -81,25 +86,54 @@
 
     for (int i=0; i<7; i++) {
         UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(125*i, 0, 125, 44)];
+        btn.tag=i;
         [btn setTitle:titleArray[i] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(selectorBtn:) forControlEvents:UIControlEventTouchUpInside];
         [btnArray addObject:btn];
         [scrollView addSubview:btn];
         
+        lineView=[[UIButton alloc]initWithFrame:CGRectMake(20, 37, 85, 1)];
+        lineView.backgroundColor=[UIColor grayColor];
+        [btn addSubview:lineView];
+        [lineArray addObject:lineView];
     }
-
+    
+    jiana=[[JianJieViewController alloc]init];
+    [self addChildViewController:jiana];
+    [self.view addSubview:jiana.view];
+    
+    label.text=@"公司简介";
+    [self.view addSubview:label];
+    ((UIView *)lineArray[0]).backgroundColor=[UIColor greenColor];
+    
 }
 -(void)selectorBtn:(UIButton *)sender{
     NSLog(@"%@",sender.titleLabel.text);
     if (sender.titleLabel.text) {
         [label removeFromSuperview];
     }
-    
+    for (int i=0; i<lineArray.count; i++) {
+        ((UIView *)lineArray[i]).backgroundColor=[UIColor grayColor];
+    }
+    ((UIView *)lineArray[sender.tag]).backgroundColor=[UIColor greenColor];
+
+
+    [jiana.view removeFromSuperview];
+    [jianb.view removeFromSuperview];
+    [zhiFan.view removeFromSuperview];
     if ([sender.titleLabel.text isEqualToString:@"公司简介"]) {
+        jiana=[[JianJieViewController alloc]init];
+        [self addChildViewController:jiana];
+        [self.view addSubview:jiana.view];
+        
         label.text=sender.titleLabel.text;
         [self.view addSubview:label];
     }else if ([sender.titleLabel.text isEqualToString:@"大事记"]) {
+        jianb=[[DshijViewController alloc]init];
+        [self addChildViewController:jianb];
+        [self.view addSubview:jianb.view];
+        
         label.text=sender.titleLabel.text;
         [self.view addSubview:label];
     }else if ([sender.titleLabel.text isEqualToString:@"数说太平"]) {
@@ -109,6 +143,11 @@
         label.text=sender.titleLabel.text;
         [self.view addSubview:label];
     }else if ([sender.titleLabel.text isEqualToString:@"枝繁叶茂"]) {
+
+        zhiFan=[[ZhiFanymViewController alloc]init];
+        [self addChildViewController:zhiFan];
+        [self.view addSubview:zhiFan.view];
+
         label.text=sender.titleLabel.text;
         [self.view addSubview:label];
     }else if ([sender.titleLabel.text isEqualToString:@"太平投资"]) {
@@ -119,6 +158,7 @@
         [self.view addSubview:label];
     }
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
