@@ -43,7 +43,7 @@
     
     
     btnArray=[NSMutableArray array];
-    titleArray=@[@"公司简介",@"大事记",@"数说太平",@"股东介绍",@"枝繁叶茂",@"太平投资",@"辉煌太平"];
+    titleArray=@[@"辉煌太平",@"公司简介",@"大事记",@"数说太平",@"股东介绍",@"枝繁叶茂",@"太平投资",@"辉煌太平",@"公司简介",@"大事记",@"数说太平"];
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     
     UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.width, 64)];
@@ -65,7 +65,7 @@
     //设置滚动条
     scrollView.showsHorizontalScrollIndicator=NO;
     // 设置内容大小
-    scrollView.contentSize = CGSizeMake(875, 44);
+    scrollView.contentSize = CGSizeMake(125*titleArray.count, 44);
     // 是否反弹
         scrollView.bounces = NO;
     // 是否分页
@@ -84,7 +84,7 @@
     scrollView.directionalLockEnabled = YES;
     [self.view addSubview:scrollView];
 
-    for (int i=0; i<7; i++) {
+    for (int i=0; i<titleArray.count; i++) {
         UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(125*i, 0, 125, 44)];
         btn.tag=i;
         [btn setTitle:titleArray[i] forState:UIControlStateNormal];
@@ -105,7 +105,12 @@
     
     label.text=@"公司简介";
     [self.view addSubview:label];
-    ((UIView *)lineArray[0]).backgroundColor=[UIColor greenColor];
+    
+    ((UIView *)lineArray[1]).backgroundColor=[UIColor greenColor];
+    ((UIView *)lineArray[8]).backgroundColor=[UIColor greenColor];
+
+    [scrollView scrollRectToVisible:CGRectMake(375, 0, 125, 44) animated:NO];
+
     
 }
 -(void)selectorBtn:(UIButton *)sender{
@@ -116,12 +121,21 @@
     for (int i=0; i<lineArray.count; i++) {
         ((UIView *)lineArray[i]).backgroundColor=[UIColor grayColor];
     }
-    ((UIView *)lineArray[sender.tag]).backgroundColor=[UIColor greenColor];
 
+    
+    ((UIView *)lineArray[sender.tag]).backgroundColor=[UIColor greenColor];
+    
+    if (sender.tag+7<titleArray.count) {
+        ((UIView *)lineArray[sender.tag+7]).backgroundColor=[UIColor greenColor];
+    }if(sender.tag>7){
+        ((UIView *)lineArray[sender.tag-7]).backgroundColor=[UIColor greenColor];
+    }
+    
 
     [jiana.view removeFromSuperview];
     [jianb.view removeFromSuperview];
     [zhiFan.view removeFromSuperview];
+    
     if ([sender.titleLabel.text isEqualToString:@"公司简介"]) {
         jiana=[[JianJieViewController alloc]init];
         [self addChildViewController:jiana];
@@ -158,7 +172,17 @@
         [self.view addSubview:label];
     }
 }
-
+//只要滚动了就会触发  循环滚动
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView;
+{
+    
+    //    NSLog(@" scrollViewDidScroll");
+    if (scrollView.contentOffset.x==0) {
+        [scrollView scrollRectToVisible:CGRectMake(1125, 0, 125, 44) animated:NO];
+    }if (scrollView.contentOffset.x==1000) {
+        [scrollView scrollRectToVisible:CGRectMake(125, 0, 125, 44) animated:NO];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
