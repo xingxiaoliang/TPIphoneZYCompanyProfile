@@ -12,7 +12,8 @@
 #import "ZhiFanymViewController.h"
 @interface ViewController ()<UIScrollViewDelegate,UIScrollViewAccessibilityDelegate>
 {
-    UIScrollView *scrollView;
+    UIScrollView *headScrollView;
+    UIImageView *headImageView;
     NSMutableArray *btnArray;
     NSArray *titleArray;
     UILabel *label;
@@ -21,11 +22,11 @@
     JianJieViewController *jiana;
     DshijViewController *jianb;
     ZhiFanymViewController *zhiFan;
+    NSString *seletedString;
+
 }
 
-
 @end
-
 
 @implementation ViewController
 
@@ -33,11 +34,7 @@
     [super viewDidLoad];
     
     lineArray=[NSMutableArray array];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
-    NSDate *adate = [dateFormatter dateFromString:@"1991-04-14"];
-    NSLog(@"adate==%@", adate);
+    btnArray=[NSMutableArray array];
     
     label=[[UILabel alloc]initWithFrame:CGRectMake(100, 100, 100, 50)];
     
@@ -57,44 +54,46 @@
     [navigationBar pushNavigationItem: navigationBarTitle animated:YES];
     [self.view addSubview: navigationBar];    // Do any additional setup after loading the view, typically from a nib.
     
-    scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH , 44)];
-    scrollView.backgroundColor = [UIColor clearColor];
+    headScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH , 44)];
+    headScrollView.backgroundColor = [UIColor clearColor];
     // 是否支持滑动最顶端
-    //    scrollView.scrollsToTop = NO;
-    scrollView.delegate = self;
+    //    headScrollView.scrollsToTop = NO;
+    headScrollView.delegate = self;
     //设置滚动条
-    scrollView.showsHorizontalScrollIndicator=NO;
+    headScrollView.showsHorizontalScrollIndicator=NO;
     // 设置内容大小
-    scrollView.contentSize = CGSizeMake(125*titleArray.count, 44);
+    headScrollView.contentSize = CGSizeMake(SCREEN_WIDTH/3*titleArray.count, 44);
     // 是否反弹
-        scrollView.bounces = NO;
+        headScrollView.bounces = NO;
     // 是否分页
-    //    scrollView.pagingEnabled = YES;
+    //    headScrollView.pagingEnabled = YES;
     // 是否滚动
-    //    scrollView.scrollEnabled = NO;
-    //    scrollView.showsHorizontalScrollIndicator = NO;
+    //    headScrollView.scrollEnabled = NO;
+    //    headScrollView.showsHorizontalScrollIndicator = NO;
     // 设置indicator风格
-    //    scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+    //    headScrollView.indicatorStyle = UIheadScrollViewIndicatorStyleWhite;
     // 设置内容的边缘和Indicators边缘
-    //    scrollView.contentInset = UIEdgeInsetsMake(0, 50, 50, 0);
-    //    scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 50, 0, 0);
+    //    headScrollView.contentInset = UIEdgeInsetsMake(0, 50, 50, 0);
+    //    headScrollView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 50, 0, 0);
     // 提示用户,Indicators flash
-    [scrollView flashScrollIndicators];
+    [headScrollView flashScrollIndicators];
     // 是否同时运动,lock
-    scrollView.directionalLockEnabled = YES;
-    [self.view addSubview:scrollView];
+    headScrollView.directionalLockEnabled = YES;
+    [self.view addSubview:headScrollView];
 
     for (int i=0; i<titleArray.count; i++) {
-        UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(125*i, 0, 125, 44)];
+        UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/3*i, 0, SCREEN_WIDTH/3, 44)];
         btn.tag=i;
         [btn setTitle:titleArray[i] forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+
         [btn addTarget:self action:@selector(selectorBtn:) forControlEvents:UIControlEventTouchUpInside];
         [btnArray addObject:btn];
-        [scrollView addSubview:btn];
+        [headScrollView addSubview:btn];
         
         lineView=[[UIButton alloc]initWithFrame:CGRectMake(20, 37, 85, 1)];
-        lineView.backgroundColor=[UIColor grayColor];
+        lineView.backgroundColor=[UIColor colorWithRed:35.0/255.0 green:150.0/255.0 blue:218.0/255.0 alpha:0.2];
         [btn addSubview:lineView];
         [lineArray addObject:lineView];
     }
@@ -106,29 +105,44 @@
     label.text=@"公司简介";
     [self.view addSubview:label];
     
-    ((UIView *)lineArray[1]).backgroundColor=[UIColor greenColor];
-    ((UIView *)lineArray[8]).backgroundColor=[UIColor greenColor];
+    ((UIView *)lineArray[1]).backgroundColor=[UIColor colorWithRed:35.0/255.0 green:150.0/255.0 blue:218.0/255.0 alpha:1.0];
+    ((UIView *)lineArray[8]).backgroundColor=[UIColor colorWithRed:35.0/255.0 green:150.0/255.0 blue:218.0/255.0 alpha:1.0];
 
-    [scrollView scrollRectToVisible:CGRectMake(375, 0, 125, 44) animated:NO];
+    [headScrollView scrollRectToVisible:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH/3, 44) animated:NO];
 
+    headImageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"公司简介121.png"]];
+    headImageView.frame=CGRectMake(0, 64, headImageView.frame.size.width*(SCREEN_WIDTH/headImageView.frame.size.width), headImageView.frame.size.height*(SCREEN_WIDTH/headImageView.frame.size.width));
+    [self.view addSubview:headImageView];
+    [self.view insertSubview:headImageView atIndex:0];
     
 }
 -(void)selectorBtn:(UIButton *)sender{
+    
+    if ([seletedString isEqualToString:sender.titleLabel.text]){
+        return;
+    }
+    seletedString=sender.titleLabel.text;
+
     NSLog(@"%@",sender.titleLabel.text);
+    [headImageView removeFromSuperview];
+    
     if (sender.titleLabel.text) {
         [label removeFromSuperview];
     }
+   
+    label.text=sender.titleLabel.text;
+    [self.view addSubview:label];
     for (int i=0; i<lineArray.count; i++) {
-        ((UIView *)lineArray[i]).backgroundColor=[UIColor grayColor];
+        ((UIView *)lineArray[i]).backgroundColor=[UIColor colorWithRed:35.0/255.0 green:150.0/255.0 blue:218.0/255.0 alpha:0.2];
     }
-
     
-    ((UIView *)lineArray[sender.tag]).backgroundColor=[UIColor greenColor];
+    ((UIView *)lineArray[sender.tag]).backgroundColor=[UIColor colorWithRed:35.0/255.0 green:150.0/255.0 blue:218.0/255.0 alpha:1.0];
+    
     
     if (sender.tag+7<titleArray.count) {
-        ((UIView *)lineArray[sender.tag+7]).backgroundColor=[UIColor greenColor];
+        ((UIView *)lineArray[sender.tag+7]).backgroundColor=[UIColor colorWithRed:35.0/255.0 green:150.0/255.0 blue:218.0/255.0 alpha:1.0];
     }if(sender.tag>7){
-        ((UIView *)lineArray[sender.tag-7]).backgroundColor=[UIColor greenColor];
+        ((UIView *)lineArray[sender.tag-7]).backgroundColor=[UIColor colorWithRed:35.0/255.0 green:150.0/255.0 blue:218.0/255.0 alpha:1.0];
     }
     
 
@@ -140,47 +154,41 @@
         jiana=[[JianJieViewController alloc]init];
         [self addChildViewController:jiana];
         [self.view addSubview:jiana.view];
+
+        headImageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"公司简介121.png"]];
+        headImageView.frame=CGRectMake(0, 64, headImageView.frame.size.width*(SCREEN_WIDTH/headImageView.frame.size.width), headImageView.frame.size.height*(SCREEN_WIDTH/headImageView.frame.size.width));
+        [self.view addSubview:headImageView];
+        [self.view insertSubview:headImageView atIndex:0];
         
-        label.text=sender.titleLabel.text;
-        [self.view addSubview:label];
     }else if ([sender.titleLabel.text isEqualToString:@"大事记"]) {
         jianb=[[DshijViewController alloc]init];
         [self addChildViewController:jianb];
         [self.view addSubview:jianb.view];
-        
-        label.text=sender.titleLabel.text;
-        [self.view addSubview:label];
-    }else if ([sender.titleLabel.text isEqualToString:@"数说太平"]) {
-        label.text=sender.titleLabel.text;
-        [self.view addSubview:label];
-    }else if ([sender.titleLabel.text isEqualToString:@"股东介绍"]) {
-        label.text=sender.titleLabel.text;
-        [self.view addSubview:label];
-    }else if ([sender.titleLabel.text isEqualToString:@"枝繁叶茂"]) {
 
+    }else if ([sender.titleLabel.text isEqualToString:@"数说太平"]) {
+
+    }else if ([sender.titleLabel.text isEqualToString:@"股东介绍"]) {
+
+    }else if ([sender.titleLabel.text isEqualToString:@"枝繁叶茂"]) {
+        
         zhiFan=[[ZhiFanymViewController alloc]init];
         [self addChildViewController:zhiFan];
         [self.view addSubview:zhiFan.view];
 
-        label.text=sender.titleLabel.text;
-        [self.view addSubview:label];
     }else if ([sender.titleLabel.text isEqualToString:@"太平投资"]) {
-        label.text=sender.titleLabel.text;
-        [self.view addSubview:label];
+
     }else if ([sender.titleLabel.text isEqualToString:@"辉煌太平"]) {
-        label.text=sender.titleLabel.text;
-        [self.view addSubview:label];
+        
     }
 }
 //只要滚动了就会触发  循环滚动
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;
 {
     
-    //    NSLog(@" scrollViewDidScroll");
-    if (scrollView.contentOffset.x==0) {
-        [scrollView scrollRectToVisible:CGRectMake(1125, 0, 125, 44) animated:NO];
-    }if (scrollView.contentOffset.x==1000) {
-        [scrollView scrollRectToVisible:CGRectMake(125, 0, 125, 44) animated:NO];
+    if (headScrollView.contentOffset.x==0) {
+        [headScrollView scrollRectToVisible:CGRectMake(SCREEN_WIDTH/3*9, 0, SCREEN_WIDTH/3, 44) animated:NO];
+    }if ((int)(headScrollView.contentOffset.x)==(int)(SCREEN_WIDTH/3*8)) {
+        [headScrollView scrollRectToVisible:CGRectMake(SCREEN_WIDTH/3, 0, SCREEN_WIDTH/3, 44) animated:NO];
     }
 }
 - (void)didReceiveMemoryWarning {

@@ -38,26 +38,27 @@ extern UIImage* Image(NSString* imageName) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.frame=CGRectMake( 0, 60,SCREEN_WIDTH+200, SCREEN_HEIGHT);
-    
+    self.view.frame=CGRectMake( 0, 110,SCREEN_WIDTH, SCREEN_HEIGHT-60);
+    self.view.backgroundColor=[UIColor clearColor];
     self.infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(35,530,200,80)];
     self.infoLabel.text = @"太平人寿总公司设在上海，目前在国内28个省、自治区、直辖市开设35家分公司和800余家三、四级机构，服务网络基本覆盖全国。";
     self.infoLabel.font = [UIFont systemFontOfSize:12];
     self.infoLabel.numberOfLines = 0;
     self.infoLabel.backgroundColor=[UIColor clearColor];
     self.infoLabel.textColor=[UIColor blackColor];
-    [self.view addSubview:self.infoLabel];
+    //[self.view addSubview:self.infoLabel];
     //界面旋转
-    self.view.transform=CGAffineTransformMakeRotation(3.14/2);
+    //self.view.transform=CGAffineTransformMakeRotation(3.14/2);
     //self.view.backgroundColor=[UIColor greenColor];
     //地图缩放比例
     zoomScale=0.8;
     
     self.view.userInteractionEnabled=YES;
     UIImage *ima=[UIImage imageNamed:@"zfym.png"];
-    self.holderView=[[UIView alloc]initWithFrame:CGRectMake(80, 260, ima.size.width*zoomScale, ima.size.height*zoomScale)];
+    self.holderView=[[UIView alloc]initWithFrame:CGRectMake(-20, 130, ima.size.width*zoomScale, ima.size.height*zoomScale)];
     //self.holderView=[[UIView alloc]initWithFrame:CGRectMake(100, 25, ima.size.width*zoomScale, ima.size.height*zoomScale)];
-
+    //旋转
+    self.holderView.transform=CGAffineTransformMakeRotation(3.14/2);
     self.holderView.backgroundColor=[UIColor clearColor];
     
     self.imageView=[[UIImageView alloc]initWithImage:ima];
@@ -190,26 +191,26 @@ extern UIImage* Image(NSString* imageName) {
     }
 }
 - (void) SingleTap:(UITapGestureRecognizer*)recognizer{
-    NSLog(@"---=====----%@",self.provinceCoordArray);
+//    NSLog(@"---=====----%@",self.provinceCoordArray);
     touchPoint = [recognizer locationInView:self.imageView];
     for (NSString *item in self.provinceCoordArray) {
-        NSLog(@"item==%@",item);
+//        NSLog(@"item==%@",item);
         NSArray *arrAreaCoordinates=[item componentsSeparatedByString:@","];
-        int c;
-        NSLog(@"arrAreaCoordinates[0]==%f  %d",[[arrAreaCoordinates objectAtIndex:0] floatValue],c++);
-        NSLog(@"arrAreaCoordinates[1]==%f",[[arrAreaCoordinates objectAtIndex:1] floatValue]);
-        NSLog(@"arrAreaCoordinates[2]==%f",[[arrAreaCoordinates objectAtIndex:2] floatValue]);
-        NSLog(@"arrAreaCoordinates[3]==%f",[[arrAreaCoordinates objectAtIndex:3] floatValue]);
-        NSLog(@"arrAreaCoordinates[4]==%f",[[arrAreaCoordinates objectAtIndex:4] floatValue]);
-        NSLog(@"count==%lu",(unsigned long)arrAreaCoordinates.count);
+//        int c;
+//        NSLog(@"arrAreaCoordinates[0]==%f  %d",[[arrAreaCoordinates objectAtIndex:0] floatValue],c++);
+//        NSLog(@"arrAreaCoordinates[1]==%f",[[arrAreaCoordinates objectAtIndex:1] floatValue]);
+//        NSLog(@"arrAreaCoordinates[2]==%f",[[arrAreaCoordinates objectAtIndex:2] floatValue]);
+//        NSLog(@"arrAreaCoordinates[3]==%f",[[arrAreaCoordinates objectAtIndex:3] floatValue]);
+//        NSLog(@"arrAreaCoordinates[4]==%f",[[arrAreaCoordinates objectAtIndex:4] floatValue]);
+//        NSLog(@"count==%lu",(unsigned long)arrAreaCoordinates.count);
         
         if ( (touchPoint.x > [[arrAreaCoordinates objectAtIndex:0] floatValue]*zoomScale) &&
             (touchPoint.x < ([[arrAreaCoordinates objectAtIndex:0] floatValue]*zoomScale+[[arrAreaCoordinates objectAtIndex:2] floatValue]*zoomScale)) &&
             (touchPoint.y > [[arrAreaCoordinates objectAtIndex:1] floatValue]*zoomScale) &&
             ( touchPoint.y < ([[arrAreaCoordinates objectAtIndex:1] floatValue]*zoomScale+[[arrAreaCoordinates objectAtIndex:3] floatValue]*zoomScale))){
-            NSLog(@"ok arrAreaCoordinates==%@",arrAreaCoordinates);
+//            NSLog(@"ok arrAreaCoordinates==%@",arrAreaCoordinates);
             int i= [[arrAreaCoordinates objectAtIndex:4] intValue];
-            NSLog(@"i==%d",i);
+//            NSLog(@"i==%d",i);
             ((UIView *)[self.provinceViewArray objectAtIndex:i]).hidden=NO;
             if (lastProvinceSelected == 1000) lastProvinceSelected=i;
             
@@ -221,7 +222,7 @@ extern UIImage* Image(NSString* imageName) {
             
             break;
         }
-        NSLog(@"=======");
+//        NSLog(@"=======");
         
     }
     [self.view setNeedsDisplay];

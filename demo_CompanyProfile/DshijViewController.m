@@ -22,7 +22,7 @@
     [super viewDidLoad];
     self.view.frame=CGRectMake(0, 108, SCREEN_WIDTH, SCREEN_HEIGHT);
     self.view.backgroundColor=[UIColor clearColor];
-    tableV=[[UITableView alloc]initWithFrame:CGRectMake(0, 150, SCREEN_WIDTH, SCREEN_HEIGHT-170) style:UITableViewStyleGrouped];
+    tableV=[[UITableView alloc]initWithFrame:CGRectMake(0, 150, SCREEN_WIDTH, SCREEN_HEIGHT-150) style:UITableViewStyleGrouped];
     tableV.delegate=self;
     tableV.dataSource=self;
     //tableView.backgroundColor=[UIColor grayColor];
